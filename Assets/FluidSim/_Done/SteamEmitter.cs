@@ -7,8 +7,14 @@ public class SteamEmitter : MonoBehaviour
     [SerializeField]
     private GameObject steamParticle;
 
-    public void EmitSteam()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Instantiate(steamParticle, transform.position, Quaternion.identity);
+        if (collision.CompareTag("Lava"))
+        {
+            // On supprime l'eau, à terme peut être faire un effet de particule
+            collision.gameObject.GetComponent<LavaTurningIntoObsidian>().TurnIntoObsidian();
+            Instantiate(steamParticle, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 }

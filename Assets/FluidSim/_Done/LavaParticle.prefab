@@ -79,6 +79,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5365892128327961990, guid: af6b875c279b9d34e988da78aeaaf01f, type: 3}
+      propertyPath: m_TagString
+      value: Lava
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af6b875c279b9d34e988da78aeaaf01f, type: 3}
 --- !u!1 &5524286637672288535 stripped
@@ -86,22 +90,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5365892128327961990, guid: af6b875c279b9d34e988da78aeaaf01f, type: 3}
   m_PrefabInstance: {fileID: 494638514011987089}
   m_PrefabAsset: {fileID: 0}
---- !u!58 &-216354732091366661
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5524286637672288535}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.7
 --- !u!114 &-6296268094263622690
 MonoBehaviour:
   m_ObjectHideFlags: 0

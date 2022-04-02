@@ -7488,7 +7488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b391b2efe4ff4479c2cc40f5c2340f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBetweenParticle: 0.2
+  startTimeBetweenParticle: 0.01
   lavaParticle: {fileID: 5524286637672288535, guid: e37301acfc54f414aa05ddee2af0fad5, type: 3}
 --- !u!1001 &929946566
 PrefabInstance:
@@ -10326,7 +10326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b391b2efe4ff4479c2cc40f5c2340f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBetweenParticle: 0.2
+  startTimeBetweenParticle: 0.01
   lavaParticle: {fileID: 5524286637672288535, guid: e37301acfc54f414aa05ddee2af0fad5, type: 3}
 --- !u!1001 &1344063269
 PrefabInstance:
