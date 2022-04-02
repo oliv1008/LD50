@@ -5,7 +5,8 @@ using UnityEngine;
 public class LavaSpawnerController : MonoBehaviour
 {
     public float startTimeBetweenParticle;
-    public float timeBetweenParticle;
+    private float timeBetweenParticle;
+    private bool startSpawning = false;
 
     [SerializeField]
     private GameObject lavaParticle;
@@ -17,7 +18,19 @@ public class LavaSpawnerController : MonoBehaviour
 
     void Update()
     {
-        timeBetweenParticle -= Time.deltaTime;
-        //if()
+        if(startSpawning)
+        {
+            timeBetweenParticle -= Time.deltaTime;
+            if (timeBetweenParticle <= 0)
+            {
+                timeBetweenParticle = startTimeBetweenParticle;
+                Instantiate(lavaParticle, transform.position, Quaternion.identity);
+            }
+        }
+    }
+
+    public void StartSpawning()
+    {
+        startSpawning = true;
     }
 }
