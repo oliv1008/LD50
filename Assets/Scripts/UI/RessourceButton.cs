@@ -4,43 +4,53 @@ using UnityEngine.UI;
 
 public enum RessourceType
 {
-    Bois,
-    Cailloux,
-    Eau,
-    Pelles
+    Wood,
+    Stone,
+    Water,
+    Dig
 }
 public class RessourceButton : MonoBehaviour
 {
+    [SerializeField] public RessourceType Type;
+
     [SerializeField] private TextMeshProUGUI Title;
     [SerializeField] private TextMeshProUGUI Compteur;
     [SerializeField] private Image RessourceImage;
     [SerializeField] private Image RessourceProgressBar;
 
-    [SerializeField] public RessourceType Type;
+    [SerializeField] private Sprite WoodSprite;
+    [SerializeField] private Sprite StoneSprite;
+    [SerializeField] private Sprite WaterSprite;
+    [SerializeField] private Sprite DigSprite;
+
+    [SerializeField] private Sprite WaterProgressBarSprite;
+    [SerializeField] private Sprite DigProgressBarSprite;
 
     // Start is called before the first frame update
     void Start()
     {
         switch(Type)
         {
-            case RessourceType.Bois:
+            case RessourceType.Wood:
                 Title.text = "Wood";
-                //RessourceImage.sprite = ;                
+                //RessourceImage.sprite = WoodSprite;                
                 RessourceProgressBar.enabled = false;
                 break;
-            case RessourceType.Cailloux:
+            case RessourceType.Stone:
                 Title.text = "Stone";
-                //RessourceImage.sprite = ;               
+                //RessourceImage.sprite = StoneSprite;               
                 RessourceProgressBar.enabled = false;
                 break;
-            case RessourceType.Eau:
+            case RessourceType.Water:
                 Title.text = "Water";
-                //RessourceImage.sprite = ;
+                //RessourceImage.sprite = WaterSprite;
+                //RessourceProgressBar.sprite = WaterProgressBarSprite;
                 Compteur.enabled = false;
                 break;
-            case RessourceType.Pelles:
+            case RessourceType.Dig:
                 Title.text = "Dig";
-                //RessourceImage.sprite = ;
+                //RessourceImage.sprite = DigSprite;
+                //RessourceProgressBar.sprite = DigProgressBarSprite;
                 Compteur.enabled = false;
                 break;
         }
