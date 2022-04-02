@@ -1,38 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1480789251445601862
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3740238708259165788}
-  m_Layer: 0
-  m_Name: Visuals
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3740238708259165788
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480789251445601862}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2514358884757759568}
-  - {fileID: 2514358885850514823}
-  - {fileID: 2514358885041714319}
-  m_Father: {fileID: 2514358885312109548}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2514358884757759533
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,8 +29,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 200, y: 100, z: 1}
   m_Children: []
-  m_Father: {fileID: 3740238708259165788}
-  m_RootOrder: 0
+  m_Father: {fileID: 5849238927799735274}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2514358884757759535
 MeshFilter:
@@ -251,8 +218,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 200, y: 100, z: 1}
   m_Children: []
-  m_Father: {fileID: 3740238708259165788}
-  m_RootOrder: 2
+  m_Father: {fileID: 5849238927799735274}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2514358885041714353
 MeshFilter:
@@ -334,7 +301,6 @@ Transform:
   - {fileID: 2514358886304371197}
   - {fileID: 2514358885681487185}
   - {fileID: 5849238927799735274}
-  - {fileID: 3740238708259165788}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -547,8 +513,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 200, y: 100, z: 1}
   m_Children: []
-  m_Father: {fileID: 3740238708259165788}
-  m_RootOrder: 1
+  m_Father: {fileID: 5849238927799735274}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2514358885850514822
 MeshFilter:
@@ -957,7 +923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5849238927799735274}
   m_Layer: 0
-  m_Name: Cameras
+  m_Name: Cameras and visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -978,6 +944,9 @@ Transform:
   - {fileID: 2514358886556690757}
   - {fileID: 2514358884822256316}
   - {fileID: 2514358885815020646}
+  - {fileID: 2514358884757759568}
+  - {fileID: 2514358885850514823}
+  - {fileID: 2514358885041714319}
   m_Father: {fileID: 2514358885312109548}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
