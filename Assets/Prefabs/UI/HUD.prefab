@@ -969,6 +969,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6347353361613252774}
     m_Modifications:
+    - target: {fileID: 4869205392917590208, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869205392917590208, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869205392917590208, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3177615648296657332, guid: 1f701dfd938e2a64eae5a2211f5a89ee, type: 3}
+    - target: {fileID: 4869205392917590208, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869205392917590208, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CanDigToggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869205392917590208, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869205392917590208, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4869205392917590209, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
       propertyPath: Type
       value: 3
@@ -1177,6 +1205,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6347353361613252774}
     m_Modifications:
+    - target: {fileID: 4869205392917590208, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869205392917590208, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869205392917590208, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3177615648296657332, guid: 1f701dfd938e2a64eae5a2211f5a89ee, type: 3}
+    - target: {fileID: 4869205392917590208, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869205392917590208, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CanCreateWaterToggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869205392917590208, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869205392917590208, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4869205392917590209, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
       propertyPath: Type
       value: 2

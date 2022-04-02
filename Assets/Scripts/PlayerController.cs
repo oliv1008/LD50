@@ -40,4 +40,14 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    public void CanDigToggle()
+    {
+        canDig = !canDig;
+    }
+
+    public void CanCreateWaterToggle()
+    {
+        canCreateWater = !canCreateWater;
+    }
 }
