@@ -33,23 +33,23 @@ public class RessourceButton : MonoBehaviour
         {
             case RessourceType.Wood:
                 Title.text = "Wood";
-                //RessourceImage.sprite = WoodSprite;                
+                RessourceImage.sprite = WoodSprite;                
                 RessourceProgressBar.enabled = false;
                 break;
             case RessourceType.Stone:
                 Title.text = "Stone";
-                //RessourceImage.sprite = StoneSprite;               
+                RessourceImage.sprite = StoneSprite;               
                 RessourceProgressBar.enabled = false;
                 break;
             case RessourceType.Water:
                 Title.text = "Water";
-                //RessourceImage.sprite = WaterSprite;
+                RessourceImage.sprite = WaterSprite;
                 //RessourceProgressBar.sprite = WaterProgressBarSprite;
                 Compteur.enabled = false;
                 break;
             case RessourceType.Dig:
                 Title.text = "Dig";
-                //RessourceImage.sprite = DigSprite;
+                RessourceImage.sprite = DigSprite;
                 //RessourceProgressBar.sprite = DigProgressBarSprite;
                 Compteur.enabled = false;
                 break;
