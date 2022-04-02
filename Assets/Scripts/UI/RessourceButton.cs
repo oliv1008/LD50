@@ -16,15 +16,13 @@ public class RessourceButton : MonoBehaviour
     [SerializeField] private TextMeshProUGUI Title;
     [SerializeField] private TextMeshProUGUI Compteur;
     [SerializeField] private Image RessourceImage;
-    [SerializeField] private Image RessourceProgressBar;
+    [SerializeField] private GameObject RessourceProgressBar;
+    [SerializeField] private Image RessourceProgressBarColor;
 
     [SerializeField] private Sprite WoodSprite;
     [SerializeField] private Sprite StoneSprite;
     [SerializeField] private Sprite WaterSprite;
     [SerializeField] private Sprite DigSprite;
-
-    [SerializeField] private Sprite WaterProgressBarSprite;
-    [SerializeField] private Sprite DigProgressBarSprite;
 
     // Start is called before the first frame update
     void Start()
@@ -33,24 +31,24 @@ public class RessourceButton : MonoBehaviour
         {
             case RessourceType.Wood:
                 Title.text = "Wood";
-                RessourceImage.sprite = WoodSprite;                
-                RessourceProgressBar.enabled = false;
+                RessourceImage.sprite = WoodSprite;
+                RessourceProgressBar.SetActive(false);
                 break;
             case RessourceType.Stone:
                 Title.text = "Stone";
-                RessourceImage.sprite = StoneSprite;               
-                RessourceProgressBar.enabled = false;
+                RessourceImage.sprite = StoneSprite;
+                RessourceProgressBar.SetActive(false);
                 break;
             case RessourceType.Water:
                 Title.text = "Water";
                 RessourceImage.sprite = WaterSprite;
-                //RessourceProgressBar.sprite = WaterProgressBarSprite;
+                RessourceProgressBarColor.color = new Color(18f / 255f, 78f / 255f, 137f / 255f);
                 Compteur.enabled = false;
                 break;
             case RessourceType.Dig:
                 Title.text = "Dig";
                 RessourceImage.sprite = DigSprite;
-                //RessourceProgressBar.sprite = DigProgressBarSprite;
+                RessourceProgressBarColor.color = new Color(115f / 255f, 62f / 255f, 57f / 255f);
                 Compteur.enabled = false;
                 break;
         }
