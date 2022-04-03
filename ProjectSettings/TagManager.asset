@@ -8,6 +8,8 @@ TagManager:
   - Lava
   - Destructible
   - WallTile
+  - Blocker
+  - LavaSpawner
   layers:
   - Default
   - TransparentFX

@@ -19,17 +19,17 @@ public class RessourceButton : MonoBehaviour
     [SerializeField] private GameObject RessourceProgressBar;
     [SerializeField] private Image RessourceProgressBarColor;
     [SerializeField] private Toggle ToggleItem;
-    [SerializeField] private PlayerController Player;
+    private PlayerController Player;
 
     [SerializeField] private Sprite WoodSprite;
     [SerializeField] private Sprite StoneSprite;
     [SerializeField] private Sprite WaterSprite;
     [SerializeField] private Sprite DigSprite;
 
-    // Start is called before the first frame update
     void Start()
     {
-        switch(Type)
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        switch (Type)
         {
             case RessourceType.Wood:
                 Title.text = "Wood";
@@ -54,12 +54,6 @@ public class RessourceButton : MonoBehaviour
                 Compteur.enabled = false;
                 break;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void Click()
