@@ -37,9 +37,13 @@ public class RessourceButton : MonoBehaviour
     [Header("Cursors")]
     [SerializeField]
     private Texture2D shovelCursor;
+    [SerializeField]
+    private Texture2D redShovelCursor;
     private Vector2 shovelOffset = Vector2.zero;
     [SerializeField]
     private Texture2D wateringCanCursor;
+    [SerializeField]
+    private Texture2D redWateringCanCursor;
     private Vector2 wateringCanOffset;
 
     void Start()
@@ -106,11 +110,9 @@ public class RessourceButton : MonoBehaviour
                 break;
             case RessourceType.Water:
                 Player.CanCreateWaterToggle(ToggleItem.isOn);
-                Cursor.SetCursor(wateringCanCursor, wateringCanOffset, CursorMode.Auto);
                 break;
             case RessourceType.Dig:
                 Player.CanDigToggle(ToggleItem.isOn);
-                Cursor.SetCursor(shovelCursor, shovelOffset, CursorMode.Auto);
                 break;
         }
     }
@@ -180,5 +182,22 @@ public class RessourceButton : MonoBehaviour
     public int GetCurrentCompteur()
     {
         return currentCompteur;
+    }
+
+    public void SetRedShovelCursor()
+    {
+        Cursor.SetCursor(redShovelCursor, shovelOffset, CursorMode.Auto);
+    }
+    public void SetShovelCursor()
+    {
+        Cursor.SetCursor(shovelCursor, shovelOffset, CursorMode.Auto);
+    }
+    public void SetRedWateringCanCursor()
+    {
+        Cursor.SetCursor(redWateringCanCursor, wateringCanOffset, CursorMode.Auto);
+    }
+    public void SetWateringCanCursor()
+    {
+        Cursor.SetCursor(wateringCanCursor, wateringCanOffset, CursorMode.Auto);
     }
 }

@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
                 rockObject.GetComponent<SpriteRenderer>().color = redHalfAlpha;
             }
         }
-        if (woodObject != null)
+        else if (woodObject != null)
         {
             woodObject.transform.position = mousePos;
             if (createWoodPossible == false && woodObject.GetComponent<CollisionBetweenObstacleDetector>().countObstacles == 0)
@@ -75,28 +75,46 @@ public class PlayerController : MonoBehaviour
                 woodObject.GetComponent<SpriteRenderer>().color = redHalfAlpha;
             }
         }
-
-        if (Input.GetMouseButton(0))
+        else if (canDig)
         {
-            if (canDig)
+            if (destructibleTilemap.GetTile(destructibleTilemap.WorldToCell(mousePos)) != null && !digPossible)
             {
-                if (destructibleTilemap.GetTile(destructibleTilemap.WorldToCell(mousePos)) != null)
-                {
-                    destructibleTilemap.SetTile(destructibleTilemap.WorldToCell(mousePos), null);
-                    hudScript.GetDigRessourceButton().SetFillingBarValue(hudScript.GetDigRessourceButton().GetCurrentFilligBar() - 1);
-                }
+                digPossible = true;
+                hudScript.GetDigRessourceButton().SetShovelCursor();
             }
-
-            if(canCreateWater)
+            else if (destructibleTilemap.GetTile(destructibleTilemap.WorldToCell(mousePos)) == null && digPossible)
             {
-                if(destructibleTilemap.GetTile(destructibleTilemap.WorldToCell(mousePos)) == null)
-                {
-                    Instantiate(waterParticule, mousePos, Quaternion.identity);
-                    hudScript.GetWaterRessourceButton().SetFillingBarValue(hudScript.GetWaterRessourceButton().GetCurrentFilligBar() - 1);
-                }
+                digPossible = false;
+                hudScript.GetDigRessourceButton().SetRedShovelCursor();
+            }
+        }
+        else if (canCreateWater)
+        {
+            if (destructibleTilemap.GetTile(destructibleTilemap.WorldToCell(mousePos)) == null && !createWaterPossible)
+            {
+                createWaterPossible = true;
+                hudScript.GetWaterRessourceButton().SetWateringCanCursor();
+            }
+            else if (destructibleTilemap.GetTile(destructibleTilemap.WorldToCell(mousePos)) != null && createWaterPossible)
+            {
+                createWaterPossible = false;
+                hudScript.GetWaterRessourceButton().SetRedWateringCanCursor();
             }
         }
 
+        if (Input.GetMouseButton(0))
+        {
+            if (digPossible)
+            {
+                destructibleTilemap.SetTile(destructibleTilemap.WorldToCell(mousePos), null);
+                hudScript.GetDigRessourceButton().SetFillingBarValue(hudScript.GetDigRessourceButton().GetCurrentFilligBar() - 1);
+            }
+            else if(createWaterPossible)
+            {
+                Instantiate(waterParticule, mousePos, Quaternion.identity);
+                hudScript.GetWaterRessourceButton().SetFillingBarValue(hudScript.GetWaterRessourceButton().GetCurrentFilligBar() - 1);
+            }
+        }
         if (Input.GetMouseButtonDown(0))
         {
             if (createRockPossible)
@@ -114,12 +132,52 @@ public class PlayerController : MonoBehaviour
 
     public void CanDigToggle(bool isOn)
     {
-        canDig = isOn;
+        if(canDig != isOn)
+        {
+            canDig = isOn;
+            if(!canDig)
+            {
+                digPossible = false;
+            }
+            else
+            {
+                if (destructibleTilemap.GetTile(destructibleTilemap.WorldToCell(mousePos)) != null)
+                {
+                    digPossible = true;
+                    hudScript.GetDigRessourceButton().SetShovelCursor();
+                }
+                else if (destructibleTilemap.GetTile(destructibleTilemap.WorldToCell(mousePos)) == null)
+                {
+                    digPossible = false;
+                    hudScript.GetDigRessourceButton().SetRedShovelCursor();
+                }
+            }
+        }
     }
 
     public void CanCreateWaterToggle(bool isOn)
     {
-        canCreateWater = isOn;
+        if (canCreateWater != isOn)
+        {
+            canCreateWater = isOn;
+            if (!canCreateWater)
+            {
+                createWaterPossible = false;
+            }
+            else
+            {
+                if (destructibleTilemap.GetTile(destructibleTilemap.WorldToCell(mousePos)) == null)
+                {
+                    createWaterPossible = true;
+                    hudScript.GetWaterRessourceButton().SetWateringCanCursor();
+                }
+                else if (destructibleTilemap.GetTile(destructibleTilemap.WorldToCell(mousePos)) != null)
+                {
+                    createWaterPossible = false;
+                    hudScript.GetWaterRessourceButton().SetRedWateringCanCursor();
+                }
+            }
+        }
     }
 
     public void CanCreateRockToggle(bool isOn)
