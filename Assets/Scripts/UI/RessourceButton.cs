@@ -26,6 +26,9 @@ public class RessourceButton : MonoBehaviour
     [SerializeField] private Sprite WaterSprite;
     [SerializeField] private Sprite DigSprite;
 
+    private int maxCompteur = 0;
+    private int maxFillingBar = 0;
+
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
@@ -94,5 +97,27 @@ public class RessourceButton : MonoBehaviour
                 Player.CanDigToggle(ToggleItem.isOn);
                 break;
         }
+    }
+
+    public void SetMaxCompteur(int max)
+    {
+        maxCompteur = max;
+        SetCompteurValue(max);
+    }
+
+    public void SetCompteurValue(int value)
+    {
+        Compteur.text = value + "/" + maxCompteur;
+    }
+
+    public void SetMaxFillingBar(int max)
+    {
+        maxFillingBar = max;
+        SetFillingBarValue(max);
+    }
+
+    public void SetFillingBarValue(int value)
+    {
+        RessourceProgressBarColor.fillAmount = (float)value / (float)maxFillingBar;
     }
 }
