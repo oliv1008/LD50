@@ -18,6 +18,8 @@ public class RessourceButton : MonoBehaviour
     [SerializeField] private Image RessourceImage;
     [SerializeField] private GameObject RessourceProgressBar;
     [SerializeField] private Image RessourceProgressBarColor;
+    [SerializeField] private Toggle ToggleItem;
+    [SerializeField] private PlayerController Player;
 
     [SerializeField] private Sprite WoodSprite;
     [SerializeField] private Sprite StoneSprite;
@@ -58,5 +60,45 @@ public class RessourceButton : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Click()
+    {
+        ToggleItem.isOn = true;
+
+        switch (Type)
+        {
+            case RessourceType.Wood:
+                
+                break;
+            case RessourceType.Stone:
+                
+                break;
+            case RessourceType.Water:
+                Player.CanCreateWaterToggle(ToggleItem.isOn);
+                break;
+            case RessourceType.Dig:
+                Player.CanDigToggle(ToggleItem.isOn);
+                break;
+        }
+    }
+
+    public void ToggleChanged()
+    {
+        switch (Type)
+        {
+            case RessourceType.Wood:
+
+                break;
+            case RessourceType.Stone:
+
+                break;
+            case RessourceType.Water:
+                Player.CanCreateWaterToggle(ToggleItem.isOn);
+                break;
+            case RessourceType.Dig:
+                Player.CanDigToggle(ToggleItem.isOn);
+                break;
+        }
     }
 }

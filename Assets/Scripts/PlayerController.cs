@@ -41,13 +41,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void CanDigToggle()
+    public void CanDigToggle(bool isOn)
     {
-        canDig = !canDig;
+        canDig = isOn;
     }
 
-    public void CanCreateWaterToggle()
+    public void CanCreateWaterToggle(bool isOn)
     {
-        canCreateWater = !canCreateWater;
+        canCreateWater = isOn;
     }
 }
