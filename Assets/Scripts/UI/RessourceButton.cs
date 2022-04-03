@@ -63,10 +63,10 @@ public class RessourceButton : MonoBehaviour
         switch (Type)
         {
             case RessourceType.Wood:
-                
+                Player.CanCreateWoodToggle(ToggleItem.isOn);
                 break;
             case RessourceType.Stone:
-                
+                Player.CanCreateRockToggle(ToggleItem.isOn);
                 break;
             case RessourceType.Water:
                 Player.CanCreateWaterToggle(ToggleItem.isOn);
@@ -82,10 +82,10 @@ public class RessourceButton : MonoBehaviour
         switch (Type)
         {
             case RessourceType.Wood:
-
+                Player.CanCreateWoodToggle(ToggleItem.isOn);
                 break;
             case RessourceType.Stone:
-
+                Player.CanCreateRockToggle(ToggleItem.isOn);
                 break;
             case RessourceType.Water:
                 Player.CanCreateWaterToggle(ToggleItem.isOn);
