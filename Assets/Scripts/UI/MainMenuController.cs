@@ -15,10 +15,13 @@ public class MainMenuController : MonoBehaviour
 
     public float WaitTime;
 
+    public static bool isComingFromLevel = false;
+
     private void Start()
     {
         OptionsMenu.SetActive(false);
-        LevelSelectMenu.SetActive(false);
+        LevelSelectMenu.SetActive(isComingFromLevel);
+        isComingFromLevel = false;
     }
     public void OptionClick()
     {
