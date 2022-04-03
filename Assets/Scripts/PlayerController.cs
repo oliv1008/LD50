@@ -33,8 +33,6 @@ public class PlayerController : MonoBehaviour
 
             if(canCreateWater)
             {
-                bool isEmptySpace = true;
-
                 if(destructibleTilemap.GetTile(destructibleTilemap.WorldToCell(mousePos)) == null)
                         Instantiate(waterParticule, mousePos, Quaternion.identity);
             }
