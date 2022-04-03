@@ -124,8 +124,15 @@ public class PlayerController : MonoBehaviour
             }
             else if (createWoodPossible)
             {
-                Instantiate(woodPrefab, mousePos, Quaternion.identity);
+                Instantiate(woodPrefab, mousePos, woodObject.transform.rotation);
                 hudScript.GetWoodRessourceButton().SetCompteurValue(hudScript.GetWoodRessourceButton().GetCurrentCompteur() - 1);
+            }
+        }
+        if(Input.GetMouseButtonDown(1))
+        {
+            if(canCreateWood)
+            {
+                woodObject.transform.Rotate(0f, 0f, 30f);
             }
         }
     }
