@@ -188,7 +188,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5805640231946255702, guid: 3b736a1fcc2a92f4dbe0a8aa74b4168b, type: 3}
       propertyPath: m_Name
-      value: Positions
+      value: BoundariesPositions
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805640232271241248, guid: 3b736a1fcc2a92f4dbe0a8aa74b4168b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 105.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805640232271241248, guid: 3b736a1fcc2a92f4dbe0a8aa74b4168b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -56
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805640232686358009, guid: 3b736a1fcc2a92f4dbe0a8aa74b4168b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -80.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805640232686358009, guid: 3b736a1fcc2a92f4dbe0a8aa74b4168b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 51.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b736a1fcc2a92f4dbe0a8aa74b4168b, type: 3}
@@ -910,15 +926,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4139473076920801481, guid: 2c235448c4a1a2e47a64e1c33f21525f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 110.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139473076920801481, guid: 2c235448c4a1a2e47a64e1c33f21525f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.2102
       objectReference: {fileID: 0}
     - target: {fileID: 4139473076920801481, guid: 2c235448c4a1a2e47a64e1c33f21525f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 10.5
       objectReference: {fileID: 0}
     - target: {fileID: 4139473076920801481, guid: 2c235448c4a1a2e47a64e1c33f21525f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 46.7
       objectReference: {fileID: 0}
     - target: {fileID: 4139473076920801481, guid: 2c235448c4a1a2e47a64e1c33f21525f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1028,6 +1048,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9217326884157914547}
     m_Modifications:
+    - target: {fileID: 3258109528703267230, guid: 95c56c124a78b324d8507f53ac2c8e77, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 41.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258109529342584205, guid: 95c56c124a78b324d8507f53ac2c8e77, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -27.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3258109529587037557, guid: 95c56c124a78b324d8507f53ac2c8e77, type: 3}
       propertyPath: m_Name
       value: LavaSpawners
