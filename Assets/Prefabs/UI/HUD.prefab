@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 1767664676181971889}
   m_Layer: 5
   m_Name: HUD
-  m_TagString: Untagged
+  m_TagString: HUD
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -895,6 +895,14 @@ PrefabInstance:
       propertyPath: Type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4869205392917590209, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: shovelCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: 98f77414c70a0264ebd6a39bdc84ac50, type: 3}
+    - target: {fileID: 4869205392917590209, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: wateringCanCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: ef8419448f666024eb6bb5d117df9970, type: 3}
     - target: {fileID: 4869205392917590214, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1038,6 +1046,14 @@ PrefabInstance:
       propertyPath: Type
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4869205392917590209, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: shovelCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: 98f77414c70a0264ebd6a39bdc84ac50, type: 3}
+    - target: {fileID: 4869205392917590209, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: wateringCanCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: ef8419448f666024eb6bb5d117df9970, type: 3}
     - target: {fileID: 4869205392917590214, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1160,6 +1176,14 @@ PrefabInstance:
       propertyPath: m_Group
       value: 
       objectReference: {fileID: 7043724772006400250}
+    - target: {fileID: 4869205392917590209, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: shovelCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: 98f77414c70a0264ebd6a39bdc84ac50, type: 3}
+    - target: {fileID: 4869205392917590209, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: wateringCanCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: ef8419448f666024eb6bb5d117df9970, type: 3}
     - target: {fileID: 4869205392917590214, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1303,6 +1327,14 @@ PrefabInstance:
       propertyPath: Type
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4869205392917590209, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: shovelCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: 98f77414c70a0264ebd6a39bdc84ac50, type: 3}
+    - target: {fileID: 4869205392917590209, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
+      propertyPath: wateringCanCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: ef8419448f666024eb6bb5d117df9970, type: 3}
     - target: {fileID: 4869205392917590214, guid: d7d84c7af964fef4596f835dacddc668, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
