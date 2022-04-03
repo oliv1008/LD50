@@ -11,6 +11,7 @@ TagManager:
   - Blocker
   - LavaSpawner
   - LevelOptions
+  - HUD
   layers:
   - Default
   - TransparentFX

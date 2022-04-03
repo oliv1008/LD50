@@ -43,17 +43,28 @@ public class HUD : MonoBehaviour
         DigButton.GetComponent<RessourceButton>()?.Disable();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void EnableButtons()
     {
         WoodButton.GetComponent<RessourceButton>()?.Enable();
         StoneButton.GetComponent<RessourceButton>()?.Enable();
         WaterButton.GetComponent<RessourceButton>()?.Enable();
         DigButton.GetComponent<RessourceButton>()?.Enable();
+    }
+
+    public RessourceButton GetWoodRessourceButton()
+    {
+        return WoodButton.GetComponent<RessourceButton>();
+    }
+    public RessourceButton GetStoneRessourceButton()
+    {
+        return StoneButton.GetComponent<RessourceButton>();
+    }
+    public RessourceButton GetWaterRessourceButton()
+    {
+        return WaterButton.GetComponent<RessourceButton>();
+    }
+    public RessourceButton GetDigRessourceButton()
+    {
+        return DigButton.GetComponent<RessourceButton>();
     }
 }

@@ -29,7 +29,9 @@ public class RessourceButton : MonoBehaviour
     [SerializeField] private Sprite DigSprite;
 
     private int maxCompteur = 0;
+    private int currentCompteur;
     private int maxFillingBar = 0;
+    private int currentFillingBar;
 
     void Start()
     {
@@ -104,12 +106,14 @@ public class RessourceButton : MonoBehaviour
     public void SetMaxCompteur(int max)
     {
         maxCompteur = max;
+        currentCompteur = max;
         SetCompteurValue(max);
     }
 
     public void SetCompteurValue(int value)
     {
         Compteur.text = value + "/" + maxCompteur;
+        currentCompteur = value;
 
         if(value == 0)
         {
@@ -120,12 +124,14 @@ public class RessourceButton : MonoBehaviour
     public void SetMaxFillingBar(int max)
     {
         maxFillingBar = max;
+        currentFillingBar = max;
         SetFillingBarValue(max);
     }
 
     public void SetFillingBarValue(int value)
     {
         RessourceProgressBarColor.fillAmount = (float)value / (float)maxFillingBar;
+        currentFillingBar = value;
 
         if (value == 0)
         {
@@ -152,5 +158,14 @@ public class RessourceButton : MonoBehaviour
         Compteur.color = new Color(1, 1, 1, 1);
         RessourceProgressBar.GetComponent<Image>().color = new Color(1, 1, 1, 1);
         ToggleBg.color = new Color(1, 1, 1, 1);
+    }
+
+    public int GetCurrentFilligBar()
+    {
+        return currentFillingBar;
+    }
+    public int GetCurrentCompteur()
+    {
+        return currentCompteur;
     }
 }

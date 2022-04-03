@@ -6875,6 +6875,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 6347353362936235343, guid: ef82c27c98a7c2041b1344755dbfe7c6, type: 3}
+      propertyPath: m_TagString
+      value: HUD
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef82c27c98a7c2041b1344755dbfe7c6, type: 3}
 --- !u!1001 &830260032
@@ -16524,15 +16528,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5239445659656487085, guid: d49af6560811e07498527d9523fbac42, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 326.04947
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5239445659656487085, guid: d49af6560811e07498527d9523fbac42, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 224.41168
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5239445659656487085, guid: d49af6560811e07498527d9523fbac42, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.013199
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5239445659656487085, guid: d49af6560811e07498527d9523fbac42, type: 3}
       propertyPath: m_LocalRotation.w
