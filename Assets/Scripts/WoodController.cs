@@ -5,21 +5,33 @@ using UnityEngine;
 public class WoodController : MonoBehaviour
 {
     [SerializeField]
-    private int hp = 3;
-    private int currentHp;
+    private float hp = 3;
+    private float currentHp;
+    private float percentHp = 1;
 
     [SerializeField]
     private float startTimeBetweenHpLoss = 1;
     private float timeBetweenHpLoss;
 
-    private Collider2D collider;
+    [SerializeField]
+    private Sprite fullHp;
+    [SerializeField]
+    private Sprite nearlyFullHp;
+    [SerializeField]
+    private Sprite halfHp;
+    [SerializeField]
+    private Sprite nearlyDestroyed;
+
+    private Collider2D woodCollider;
+    private SpriteRenderer spriteComponent;
 
 
     void Start()
     {
         currentHp = hp;
         timeBetweenHpLoss = startTimeBetweenHpLoss;
-        collider = GetComponent<Collider2D>();
+        woodCollider = GetComponent<Collider2D>();
+        spriteComponent = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -35,12 +47,31 @@ public class WoodController : MonoBehaviour
                 {
                     Destroy(gameObject);
                 }
+                percentHp = currentHp / hp;
+
+                if(percentHp > 0.75f)
+                {
+                    spriteComponent.sprite = fullHp;
+                }
+                else if (percentHp <= 0.75f && percentHp > 0.5f)
+                {
+                    spriteComponent.sprite = nearlyFullHp;
+                }
+                else if (percentHp <= 0.5f && percentHp > 0.25f)
+                {
+                    spriteComponent.sprite = halfHp;
+                }
+                else
+                {
+                    spriteComponent.sprite = nearlyDestroyed;
+                }
+
             }
         }
     }
 
     private bool HasLavaAround()
     {
-        return collider.IsTouchingLayers(LayerMask.GetMask("Lava"));
+        return woodCollider.IsTouchingLayers(LayerMask.GetMask("Lava"));
     }
 }
