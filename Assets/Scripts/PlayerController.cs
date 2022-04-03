@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private HUD hudScript;
     private Vector3 mousePos;
 
+    [Header("Prefabs")]
     [SerializeField]
     private GameObject waterParticule;
     [SerializeField]

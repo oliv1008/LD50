@@ -18,5 +18,6 @@ MonoBehaviour:
   isUsingDig: 1
   maxWood: 5
   maxStone: 5
-  maxWater: 2
-  maxDig: 2
+  maxWater: 300
+  maxDig: 15
+  levelTime: 0
