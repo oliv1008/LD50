@@ -7,12 +7,18 @@ public class PlayerController : MonoBehaviour
 {
     public bool canCreateWater = false;
     public bool canDig = false;
+    public bool canCreateRock = false;
+    public bool canCreateWood = false;
 
     private Tilemap destructibleTilemap;
     private Vector3 mousePos;
 
     [SerializeField]
     private GameObject waterParticule;
+    [SerializeField]
+    private GameObject rockPrefab;
+    [SerializeField]
+    private GameObject woodPrefab;
 
     private void Start()
     {
@@ -37,6 +43,24 @@ public class PlayerController : MonoBehaviour
                         Instantiate(waterParticule, mousePos, Quaternion.identity);
             }
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePos.z = 0;
+
+            if (canCreateRock)
+            {
+                if (destructibleTilemap.GetTile(destructibleTilemap.WorldToCell(mousePos)) == null)
+                    Instantiate(rockPrefab, mousePos, Quaternion.identity);
+            }
+
+            if (canCreateWood)
+            {
+                if (destructibleTilemap.GetTile(destructibleTilemap.WorldToCell(mousePos)) == null)
+                    Instantiate(woodPrefab, mousePos, Quaternion.identity);
+            }
+        }
     }
 
     public void CanDigToggle(bool isOn)
@@ -47,5 +71,15 @@ public class PlayerController : MonoBehaviour
     public void CanCreateWaterToggle(bool isOn)
     {
         canCreateWater = isOn;
+    }
+
+    public void CanCreateRockToggle(bool isOn)
+    {
+        canCreateRock = isOn;
+    }
+
+    public void CanCreateWoodToggle(bool isOn)
+    {
+        canCreateWood = isOn;
     }
 }
