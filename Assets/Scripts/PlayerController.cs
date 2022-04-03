@@ -10,6 +10,11 @@ public class PlayerController : MonoBehaviour
     public bool canCreateRock = false;
     public bool canCreateWood = false;
 
+    public bool createWaterPossible = false;
+    public bool digPossible = false;
+    public bool createRockPossible = false;
+    public bool createWoodPossible = false;
+
     private Tilemap destructibleTilemap;
     private HUD hudScript;
     private Vector3 mousePos;
@@ -20,7 +25,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject rockPrefab;
     [SerializeField]
+    private GameObject rockHoverPrefab;
+    private GameObject rockObject = null;
+    [SerializeField]
     private GameObject woodPrefab;
+    [SerializeField]
+    private GameObject woodHoverPrefab;
+    private GameObject woodObject = null;
+
+    private Color greenHalfAlpha = new Color(0f, 1f, 0f, 127f / 255f);
+    private Color redHalfAlpha = new Color(1f, 0f, 0f, 127f / 255f);
+    private Color freedentWhite = new Color(1f, 1f, 1f, 1f);
 
     private void Start()
     {
@@ -30,11 +45,39 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0;
+        if (rockObject != null)
+        {
+            rockObject.transform.position = mousePos;
+            if (createRockPossible == false && rockObject.GetComponent<CollisionBetweenObstacleDetector>().countObstacles == 0)
+            {
+                createRockPossible = true;
+                rockObject.GetComponent<SpriteRenderer>().color = greenHalfAlpha;
+            }
+            else if(rockObject.GetComponent<CollisionBetweenObstacleDetector>().countObstacles != 0 && createRockPossible == true)
+            {
+                createRockPossible = false;
+                rockObject.GetComponent<SpriteRenderer>().color = redHalfAlpha;
+            }
+        }
+        if (woodObject != null)
+        {
+            woodObject.transform.position = mousePos;
+            if (createWoodPossible == false && woodObject.GetComponent<CollisionBetweenObstacleDetector>().countObstacles == 0)
+            {
+                createWoodPossible = true;
+                woodObject.GetComponent<SpriteRenderer>().color = greenHalfAlpha;
+            }
+            else if (woodObject.GetComponent<CollisionBetweenObstacleDetector>().countObstacles != 0 && createWoodPossible == true)
+            {
+                createWoodPossible = false;
+                woodObject.GetComponent<SpriteRenderer>().color = redHalfAlpha;
+            }
+        }
+
         if (Input.GetMouseButton(0))
         {
-            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mousePos.z = 0;
-
             if (canDig)
             {
                 if (destructibleTilemap.GetTile(destructibleTilemap.WorldToCell(mousePos)) != null)
@@ -56,25 +99,15 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mousePos.z = 0;
-
-            if (canCreateRock)
+            if (createRockPossible)
             {
-                if (destructibleTilemap.GetTile(destructibleTilemap.WorldToCell(mousePos)) == null)
-                {
-                    Instantiate(rockPrefab, mousePos, Quaternion.identity);
-                    hudScript.GetStoneRessourceButton().SetCompteurValue(hudScript.GetStoneRessourceButton().GetCurrentCompteur() - 1);
-                }
+                Instantiate(rockPrefab, mousePos, Quaternion.identity);
+                hudScript.GetStoneRessourceButton().SetCompteurValue(hudScript.GetStoneRessourceButton().GetCurrentCompteur() - 1);
             }
-
-            if (canCreateWood)
+            else if (createWoodPossible)
             {
-                if (destructibleTilemap.GetTile(destructibleTilemap.WorldToCell(mousePos)) == null)
-                {
-                    Instantiate(woodPrefab, mousePos, Quaternion.identity);
-                    hudScript.GetWoodRessourceButton().SetCompteurValue(hudScript.GetWoodRessourceButton().GetCurrentCompteur() - 1);
-                }
+                Instantiate(woodPrefab, mousePos, Quaternion.identity);
+                hudScript.GetWoodRessourceButton().SetCompteurValue(hudScript.GetWoodRessourceButton().GetCurrentCompteur() - 1);
             }
         }
     }
@@ -91,11 +124,37 @@ public class PlayerController : MonoBehaviour
 
     public void CanCreateRockToggle(bool isOn)
     {
-        canCreateRock = isOn;
+        if(canCreateRock != isOn)
+        {
+            canCreateRock = isOn;
+            if (canCreateRock)
+            {
+                rockObject = Instantiate(rockHoverPrefab, mousePos, Quaternion.identity);
+            }
+            else
+            {
+                Destroy(rockObject);
+                rockObject = null;
+                createRockPossible = false;
+            }
+        }
     }
 
     public void CanCreateWoodToggle(bool isOn)
     {
-        canCreateWood = isOn;
+        if(canCreateWood != isOn)
+        {
+            canCreateWood = isOn;
+            if (canCreateWood)
+            {
+                woodObject = Instantiate(woodHoverPrefab, mousePos, Quaternion.identity);
+            }
+            else
+            {
+                Destroy(woodObject);
+                woodObject = null;
+                createWoodPossible = false;
+            }
+        }
     }
 }

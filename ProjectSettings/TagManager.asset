@@ -12,6 +12,7 @@ TagManager:
   - LavaSpawner
   - LevelOptions
   - HUD
+  - Obstacle
   layers:
   - Default
   - TransparentFX
