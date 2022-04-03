@@ -19,6 +19,8 @@ public class RessourceButton : MonoBehaviour
     [SerializeField] private GameObject RessourceProgressBar;
     [SerializeField] private Image RessourceProgressBarColor;
     [SerializeField] private Toggle ToggleItem;
+    [SerializeField] private Image ToggleBg;
+    [SerializeField] private Button thisButton;
     private PlayerController Player;
 
     [SerializeField] private Sprite WoodSprite;
@@ -66,12 +68,13 @@ public class RessourceButton : MonoBehaviour
         switch (Type)
         {
             case RessourceType.Wood:
-                
+                SetCompteurValue(0);
                 break;
             case RessourceType.Stone:
                 
                 break;
             case RessourceType.Water:
+                SetFillingBarValue(0);
                 Player.CanCreateWaterToggle(ToggleItem.isOn);
                 break;
             case RessourceType.Dig:
@@ -108,6 +111,11 @@ public class RessourceButton : MonoBehaviour
     public void SetCompteurValue(int value)
     {
         Compteur.text = value + "/" + maxCompteur;
+
+        if(value == 0)
+        {
+            Disable();
+        }
     }
 
     public void SetMaxFillingBar(int max)
@@ -119,5 +127,31 @@ public class RessourceButton : MonoBehaviour
     public void SetFillingBarValue(int value)
     {
         RessourceProgressBarColor.fillAmount = (float)value / (float)maxFillingBar;
+
+        if (value == 0)
+        {
+            Disable();
+        }
+    }
+
+    public void Disable()
+    {
+        ToggleItem.isOn = false;
+        thisButton.interactable = false;
+        Title.color = new Color(200f / 255f, 200f / 255f, 200f / 255f, 128f / 255f);
+        RessourceImage.color = new Color(200f / 255f, 200f / 255f, 200f / 255f, 128f / 255f);
+        Compteur.color = new Color(200f / 255f, 200f / 255f, 200f / 255f, 128f / 255f);
+        RessourceProgressBar.GetComponent<Image>().color = new Color(200f / 255f, 200f / 255f, 200f / 255f, 128f / 255f);
+        ToggleBg.color = new Color(200f / 255f, 200f / 255f, 200f / 255f, 128f / 255f);
+    }
+
+    public void Enable()
+    {
+        thisButton.interactable = true;
+        Title.color = new Color(1, 1, 1, 1);
+        RessourceImage.color = new Color(1, 1, 1, 1);
+        Compteur.color = new Color(1, 1, 1, 1);
+        RessourceProgressBar.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        ToggleBg.color = new Color(1, 1, 1, 1);
     }
 }

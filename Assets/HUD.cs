@@ -9,6 +9,8 @@ public class HUD : MonoBehaviour
     [SerializeField] GameObject WaterButton;
     [SerializeField] GameObject DigButton;
 
+    [SerializeField] StartLevelButton StartButton;
+
     private LevelOptionsHandler levelOptions;
 
     private int maxTime = 0;
@@ -17,6 +19,8 @@ public class HUD : MonoBehaviour
     void Start()
     {
         levelOptions = GameObject.FindGameObjectWithTag("LevelOptions").GetComponent<LevelOptionsHandler>();
+
+        StartButton.start.AddListener(EnableButtons);
 
         if(levelOptions != null)
         {
@@ -32,12 +36,24 @@ public class HUD : MonoBehaviour
 
             maxTime = levelOptions.levelOptions.levelTime;
         }
-        
+
+        WoodButton.GetComponent<RessourceButton>()?.Disable();
+        StoneButton.GetComponent<RessourceButton>()?.Disable();
+        WaterButton.GetComponent<RessourceButton>()?.Disable();
+        DigButton.GetComponent<RessourceButton>()?.Disable();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void EnableButtons()
+    {
+        WoodButton.GetComponent<RessourceButton>()?.Enable();
+        StoneButton.GetComponent<RessourceButton>()?.Enable();
+        WaterButton.GetComponent<RessourceButton>()?.Enable();
+        DigButton.GetComponent<RessourceButton>()?.Enable();
     }
 }

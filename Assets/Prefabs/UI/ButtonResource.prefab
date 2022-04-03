@@ -681,7 +681,8 @@ MonoBehaviour:
   RessourceProgressBar: {fileID: 4142918783722014226}
   RessourceProgressBarColor: {fileID: 4869205393187622606}
   ToggleItem: {fileID: 4318514885630273260}
-  Player: {fileID: 0}
+  ToggleBg: {fileID: 3881454340045375866}
+  thisButton: {fileID: 4869205392917590208}
   WoodSprite: {fileID: 21300000, guid: 722121a11ba07434493f4c6e5517449a, type: 3}
   StoneSprite: {fileID: 21300000, guid: 98cdf70f32ba3894ead9fb6d32976ff0, type: 3}
   WaterSprite: {fileID: 21300000, guid: 0006c45ec1d54f04d9394d49e03363fd, type: 3}

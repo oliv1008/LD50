@@ -233,6 +233,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c03a3121d06aa84b908623e238d6cc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6347353361613252775
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +433,7 @@ MonoBehaviour:
   StoneButton: {fileID: 6347353362032273967}
   WaterButton: {fileID: 1982904080478461902}
   DigButton: {fileID: 1982904079564134158}
+  StartButton: {fileID: 782505628}
 --- !u!1 &6387807792094767475
 GameObject:
   m_ObjectHideFlags: 0
