@@ -16,5 +16,6 @@ public class LavaTurningIntoObsidian : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().angularDrag = obsidianParticle.GetComponent<Rigidbody2D>().angularDrag;
         gameObject.GetComponent<Rigidbody2D>().gravityScale = obsidianParticle.GetComponent<Rigidbody2D>().gravityScale;
         gameObject.GetComponent<Rigidbody2D>().drag = obsidianParticle.GetComponent<Rigidbody2D>().drag;
+        gameObject.GetComponent<SpriteRenderer>().sprite = obsidianParticle.GetComponent<SpriteRenderer>().sprite;
     }
 }

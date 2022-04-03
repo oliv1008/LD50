@@ -83,6 +83,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5365892128327961987, guid: af6b875c279b9d34e988da78aeaaf01f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 30355ad605e256344b9b1cbf32505a19, type: 3}
     - target: {fileID: 5365892128327961990, guid: af6b875c279b9d34e988da78aeaaf01f, type: 3}
       propertyPath: m_Name
       value: ObsidianParticle
