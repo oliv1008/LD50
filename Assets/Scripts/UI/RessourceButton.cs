@@ -199,6 +199,7 @@ public class RessourceButton : MonoBehaviour
     public void SetWateringCanCursor()
     {
         Cursor.SetCursor(wateringCanCursor, wateringCanOffset, CursorMode.Auto);
+    }
     public bool GetToggleOn()
     {
         return ToggleItem.isOn;
