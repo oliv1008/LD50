@@ -14,4 +14,6 @@ public class LevelOptionScriptable : ScriptableObject
     public int maxStone;
     public int maxWater;
     public int maxDig;
+
+    public int levelTime;
 }

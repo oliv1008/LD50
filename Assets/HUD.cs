@@ -11,6 +11,8 @@ public class HUD : MonoBehaviour
 
     private LevelOptionsHandler levelOptions;
 
+    private int maxTime = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,8 @@ public class HUD : MonoBehaviour
             StoneButton.GetComponent<RessourceButton>()?.SetMaxCompteur(levelOptions.levelOptions.maxStone);
             WaterButton.GetComponent<RessourceButton>()?.SetMaxFillingBar(levelOptions.levelOptions.maxWater);
             DigButton.GetComponent<RessourceButton>()?.SetMaxFillingBar(levelOptions.levelOptions.maxDig);
+
+            maxTime = levelOptions.levelOptions.levelTime;
         }
         
     }
