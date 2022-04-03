@@ -68,13 +68,11 @@ public class RessourceButton : MonoBehaviour
         switch (Type)
         {
             case RessourceType.Wood:
-                SetCompteurValue(0);
                 break;
             case RessourceType.Stone:
                 
                 break;
             case RessourceType.Water:
-                SetFillingBarValue(0);
                 Player.CanCreateWaterToggle(ToggleItem.isOn);
                 break;
             case RessourceType.Dig:
