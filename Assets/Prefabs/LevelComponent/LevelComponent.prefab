@@ -188,7 +188,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5805640231946255702, guid: 3b736a1fcc2a92f4dbe0a8aa74b4168b, type: 3}
       propertyPath: m_Name
-      value: Positions
+      value: BoundariesPositions
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805640232271241248, guid: 3b736a1fcc2a92f4dbe0a8aa74b4168b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 96.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805640232271241248, guid: 3b736a1fcc2a92f4dbe0a8aa74b4168b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -56
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805640232686358009, guid: 3b736a1fcc2a92f4dbe0a8aa74b4168b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805640232686358009, guid: 3b736a1fcc2a92f4dbe0a8aa74b4168b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 51.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b736a1fcc2a92f4dbe0a8aa74b4168b, type: 3}
@@ -401,6 +417,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2514358885312109548, guid: 033b8f67afcf9f042b2aa6074b7014e8, type: 3}
   m_PrefabInstance: {fileID: 6278108391027217188}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7537623327736789202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4592358985987877878, guid: 033b8f67afcf9f042b2aa6074b7014e8, type: 3}
+  m_PrefabInstance: {fileID: 6278108391027217188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1650690849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7537623327736789202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 879b2ee3fa3f3cd49a3b232b1915c9dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanningSpeed: 20
+  PanningBorderThickness: 50
 --- !u!1001 &6278108391254332723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -777,7 +812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6311464229188959141, guid: fd4885d69347beb4091093a318f61ffe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 6311464229188959141, guid: fd4885d69347beb4091093a318f61ffe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -910,15 +945,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4139473076920801481, guid: 2c235448c4a1a2e47a64e1c33f21525f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 110.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 4139473076920801481, guid: 2c235448c4a1a2e47a64e1c33f21525f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.2102
       objectReference: {fileID: 0}
     - target: {fileID: 4139473076920801481, guid: 2c235448c4a1a2e47a64e1c33f21525f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 10.5
       objectReference: {fileID: 0}
     - target: {fileID: 4139473076920801481, guid: 2c235448c4a1a2e47a64e1c33f21525f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 46.7
       objectReference: {fileID: 0}
     - target: {fileID: 4139473076920801481, guid: 2c235448c4a1a2e47a64e1c33f21525f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1028,6 +1067,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9217326884157914547}
     m_Modifications:
+    - target: {fileID: 3258109528703267230, guid: 95c56c124a78b324d8507f53ac2c8e77, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 41.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258109529342584205, guid: 95c56c124a78b324d8507f53ac2c8e77, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -27.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3258109529587037557, guid: 95c56c124a78b324d8507f53ac2c8e77, type: 3}
       propertyPath: m_Name
       value: LavaSpawners

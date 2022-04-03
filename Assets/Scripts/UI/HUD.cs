@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
@@ -9,6 +10,7 @@ public class HUD : MonoBehaviour
     [SerializeField] GameObject WaterButton;
     [SerializeField] GameObject DigButton;
     [SerializeField] GameObject WinFields;
+    [SerializeField] GameObject GameOverFields;
     [SerializeField] GameObject PauseMenu;
     [SerializeField] Slider ProgressBar;
 
@@ -31,6 +33,7 @@ public class HUD : MonoBehaviour
         levelOptions = GameObject.FindGameObjectWithTag("LevelOptions").GetComponent<LevelOptionsHandler>();
 
         StartButton.start.AddListener(StartGame);
+        DeathZoneScript.dieEvent.AddListener(Loose);
 
         if(levelOptions != null)
         {
@@ -56,6 +59,7 @@ public class HUD : MonoBehaviour
         DisableButtons();
 
         WinFields.SetActive(false);
+        GameOverFields.SetActive(false);
         PauseMenu.SetActive(false);
     }
 
@@ -144,7 +148,9 @@ public class HUD : MonoBehaviour
 
     public void ContinueButton()
     {
-        //TODO
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
+        MainMenuController.isComingFromLevel = true;
     }
 
     private void StartGame()
@@ -158,6 +164,14 @@ public class HUD : MonoBehaviour
         startedGame = false;
         Time.timeScale = 0f;
         WinFields.SetActive(true);
+        DisableButtons();
+    }
+
+    private void Loose()
+    {
+        startedGame = false;
+        GameOverFields.SetActive(true);
+        Time.timeScale = 0f;
         DisableButtons();
     }
 

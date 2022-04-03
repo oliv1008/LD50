@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class DeathZoneScript : MonoBehaviour
 {
     public int hpLeft = 10;
-    public UnityEvent dieEvent = new UnityEvent();
+    public static UnityEvent dieEvent = new UnityEvent();
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class DeathZoneScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.name == "LavaParticle")
+        if (collision.CompareTag("Lava"))
         {
             hpLeft -= 1;
             if (hpLeft == 0)

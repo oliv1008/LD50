@@ -8,15 +8,20 @@ public class MainMenuController : MonoBehaviour
     public GameObject ButtonsContainer;
     public GameObject OptionsMenu;
     public GameObject ExitButton;
+    public GameObject LevelSelectMenu;
 
     public Animator musicAnim;
     public Animator canvasAnim;
 
     public float WaitTime;
 
+    public static bool isComingFromLevel = false;
+
     private void Start()
     {
         OptionsMenu.SetActive(false);
+        LevelSelectMenu.SetActive(isComingFromLevel);
+        isComingFromLevel = false;
     }
     public void OptionClick()
     {
@@ -36,6 +41,15 @@ public class MainMenuController : MonoBehaviour
         ExitButton.SetActive(true);
     }
 
+    public void ClickBackLevelSelect()
+    {
+        LevelSelectMenu.SetActive(false);
+
+        Title.SetActive(true);
+        ButtonsContainer.SetActive(true);
+        ExitButton.SetActive(true);
+    }
+
     public void ClickExit()
     {
         Application.Quit();
@@ -48,7 +62,11 @@ public class MainMenuController : MonoBehaviour
 
     public void ClickLevelSelection()
     {
+        LevelSelectMenu.SetActive(true);
 
+        Title.SetActive(false);
+        ButtonsContainer.SetActive(false);
+        ExitButton.SetActive(false);
     }
 
     IEnumerator ChangeSceneMusic()
