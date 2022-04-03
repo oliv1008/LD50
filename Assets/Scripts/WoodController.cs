@@ -21,6 +21,7 @@ public class WoodController : MonoBehaviour
     private Sprite halfHp;
     [SerializeField]
     private Sprite nearlyDestroyed;
+    private AudioSource destroyedSound;
 
     private Collider2D woodCollider;
     private SpriteRenderer spriteComponent;
@@ -32,6 +33,7 @@ public class WoodController : MonoBehaviour
         timeBetweenHpLoss = startTimeBetweenHpLoss;
         woodCollider = GetComponent<Collider2D>();
         spriteComponent = GetComponent<SpriteRenderer>();
+        destroyedSound = GameObject.FindGameObjectWithTag("DestroyedWoodSound").GetComponent<AudioSource>();
     }
 
     void Update()
@@ -45,6 +47,7 @@ public class WoodController : MonoBehaviour
                 currentHp -= 1;
                 if (currentHp <= 0)
                 {
+                    destroyedSound.Play();
                     Destroy(gameObject);
                 }
                 percentHp = currentHp / hp;

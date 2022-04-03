@@ -6,9 +6,12 @@ public class LavaTurningIntoObsidian : MonoBehaviour
 {
     [SerializeField]
     private GameObject obsidianParticle;
+    [SerializeField]
+    private AudioSource steamSound;
 
     public void TurnIntoObsidian()
     {
+        steamSound.Play();
         gameObject.layer = 9;
         gameObject.tag = "Untagged";
         gameObject.GetComponent<CircleCollider2D>().sharedMaterial = obsidianParticle.GetComponent<CircleCollider2D>().sharedMaterial;

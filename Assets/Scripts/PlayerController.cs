@@ -6,15 +6,15 @@ using UnityEngine.Tilemaps;
 
 public class PlayerController : MonoBehaviour
 {
-    public bool canCreateWater = false;
-    public bool canDig = false;
-    public bool canCreateRock = false;
-    public bool canCreateWood = false;
+    private bool canCreateWater = false;
+    private bool canDig = false;
+    private bool canCreateRock = false;
+    private bool canCreateWood = false;
 
-    public bool createWaterPossible = false;
-    public bool digPossible = false;
-    public bool createRockPossible = false;
-    public bool createWoodPossible = false;
+    private bool createWaterPossible = false;
+    private bool digPossible = false;
+    private bool createRockPossible = false;
+    private bool createWoodPossible = false;
 
     private Tilemap destructibleTilemap;
     private HUD hudScript;
@@ -23,6 +23,12 @@ public class PlayerController : MonoBehaviour
     [Header("Prefabs")]
     [SerializeField]
     private GameObject waterParticule;
+    [SerializeField]
+    private AudioSource waterSound;
+    [SerializeField]
+    private AudioSource digSound;
+    [SerializeField]
+    private GameObject digParticleEffect;
     [SerializeField]
     private GameObject rockPrefab;
     [SerializeField]
@@ -107,11 +113,16 @@ public class PlayerController : MonoBehaviour
         {
             if (digPossible)
             {
+                if(!digSound.isPlaying)
+                    digSound.Play();
+                Instantiate(digParticleEffect, mousePos, Quaternion.identity);
                 destructibleTilemap.SetTile(destructibleTilemap.WorldToCell(mousePos), null);
                 hudScript.GetDigRessourceButton().SetFillingBarValue(hudScript.GetDigRessourceButton().GetCurrentFilligBar() - 1);
             }
             else if(createWaterPossible)
             {
+                if(!waterSound.isPlaying)
+                    waterSound.Play();
                 Instantiate(waterParticule, mousePos, Quaternion.identity);
                 hudScript.GetWaterRessourceButton().SetFillingBarValue(hudScript.GetWaterRessourceButton().GetCurrentFilligBar() - 1);
             }

@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8656965760892205735, guid: 21cd08b1bc1d0624dad367854f48f5a8, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5081570965115889105, guid: 21cd08b1bc1d0624dad367854f48f5a8, type: 3}
       propertyPath: m_Name
       value: RockHover
