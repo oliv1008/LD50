@@ -11,6 +11,9 @@ TagManager:
   - Blocker
   - LavaSpawner
   - LevelOptions
+  - TopLeft
+  - BottomRight
+  - Background
   layers:
   - Default
   - TransparentFX
@@ -47,4 +50,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 3623885683
     locked: 0
