@@ -168,4 +168,14 @@ public class RessourceButton : MonoBehaviour
     {
         return currentCompteur;
     }
+
+    public bool GetToggleOn()
+    {
+        return ToggleItem.isOn;
+    }
+
+    public void UnToggle()
+    {
+        ToggleItem.isOn = false;
+    }
 }
