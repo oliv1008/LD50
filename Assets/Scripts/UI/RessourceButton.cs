@@ -11,8 +11,8 @@ public enum RessourceType
 }
 public class RessourceButton : MonoBehaviour
 {
+    [Header("Informations")]
     [SerializeField] public RessourceType Type;
-
     [SerializeField] private TextMeshProUGUI Title;
     [SerializeField] private TextMeshProUGUI Compteur;
     [SerializeField] private Image RessourceImage;
@@ -23,6 +23,7 @@ public class RessourceButton : MonoBehaviour
     [SerializeField] private Button thisButton;
     private PlayerController Player;
 
+    [Header("Sprites")]
     [SerializeField] private Sprite WoodSprite;
     [SerializeField] private Sprite StoneSprite;
     [SerializeField] private Sprite WaterSprite;
@@ -33,9 +34,22 @@ public class RessourceButton : MonoBehaviour
     private int maxFillingBar = 0;
     private int currentFillingBar;
 
+    [Header("Cursors")]
+    [SerializeField]
+    private Texture2D shovelCursor;
+    [SerializeField]
+    private Texture2D redShovelCursor;
+    private Vector2 shovelOffset = Vector2.zero;
+    [SerializeField]
+    private Texture2D wateringCanCursor;
+    [SerializeField]
+    private Texture2D redWateringCanCursor;
+    private Vector2 wateringCanOffset;
+
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        wateringCanOffset = new Vector2(0, wateringCanCursor.height);
         switch (Type)
         {
             case RessourceType.Wood:
@@ -66,7 +80,6 @@ public class RessourceButton : MonoBehaviour
     public void Click()
     {
         ToggleItem.isOn = true;
-
         switch (Type)
         {
             case RessourceType.Wood:
@@ -86,6 +99,7 @@ public class RessourceButton : MonoBehaviour
 
     public void ToggleChanged()
     {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         switch (Type)
         {
             case RessourceType.Wood:
@@ -141,6 +155,7 @@ public class RessourceButton : MonoBehaviour
 
     public void Disable()
     {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         ToggleItem.isOn = false;
         thisButton.interactable = false;
         Title.color = new Color(200f / 255f, 200f / 255f, 200f / 255f, 128f / 255f);
@@ -167,5 +182,31 @@ public class RessourceButton : MonoBehaviour
     public int GetCurrentCompteur()
     {
         return currentCompteur;
+    }
+
+    public void SetRedShovelCursor()
+    {
+        Cursor.SetCursor(redShovelCursor, shovelOffset, CursorMode.Auto);
+    }
+    public void SetShovelCursor()
+    {
+        Cursor.SetCursor(shovelCursor, shovelOffset, CursorMode.Auto);
+    }
+    public void SetRedWateringCanCursor()
+    {
+        Cursor.SetCursor(redWateringCanCursor, wateringCanOffset, CursorMode.Auto);
+    }
+    public void SetWateringCanCursor()
+    {
+        Cursor.SetCursor(wateringCanCursor, wateringCanOffset, CursorMode.Auto);
+    }
+    public bool GetToggleOn()
+    {
+        return ToggleItem.isOn;
+    }
+
+    public void UnToggle()
+    {
+        ToggleItem.isOn = false;
     }
 }
