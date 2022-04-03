@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 
 public class PlayerController : MonoBehaviour
@@ -102,7 +103,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             if (digPossible)
             {
@@ -115,7 +116,7 @@ public class PlayerController : MonoBehaviour
                 hudScript.GetWaterRessourceButton().SetFillingBarValue(hudScript.GetWaterRessourceButton().GetCurrentFilligBar() - 1);
             }
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             if (createRockPossible)
             {
@@ -128,7 +129,7 @@ public class PlayerController : MonoBehaviour
                 hudScript.GetWoodRessourceButton().SetCompteurValue(hudScript.GetWoodRessourceButton().GetCurrentCompteur() - 1);
             }
         }
-        if(Input.GetMouseButtonDown(1))
+        if(Input.GetMouseButtonDown(1) && !EventSystem.current.IsPointerOverGameObject())
         {
             if(canCreateWood)
             {
