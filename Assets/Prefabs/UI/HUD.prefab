@@ -3099,6 +3099,7 @@ MonoBehaviour:
   GameOverFields: {fileID: 668149335042908451}
   PauseMenu: {fileID: 4183412230848458841}
   ProgressBar: {fileID: 4749440861922268501}
+  Heart: {fileID: 6862130711887888831}
   showEscapeTutorial: 0
   tooltipObjectEscape: {fileID: 86406394}
   StartButton: {fileID: 782505628}
@@ -3263,7 +3264,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -60, y: -130}
+  m_AnchoredPosition: {x: -60, y: -200}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6871253192170823650

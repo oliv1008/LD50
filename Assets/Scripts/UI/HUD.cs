@@ -13,6 +13,7 @@ public class HUD : MonoBehaviour
     [SerializeField] GameObject GameOverFields;
     [SerializeField] GameObject PauseMenu;
     [SerializeField] Slider ProgressBar;
+    [SerializeField] GameObject Heart;
     [SerializeField] private bool showEscapeTutorial = false;
     [SerializeField] private GameObject tooltipObjectEscape;
 
@@ -181,6 +182,7 @@ public class HUD : MonoBehaviour
         StoneButton.SetActive(false);
         DigButton.SetActive(false);
         WaterButton.SetActive(false);
+        Heart.SetActive(false);
         StartButton.gameObject.SetActive(false);
         ProgressBar.gameObject.SetActive(false);
         DisableButtons();
@@ -196,6 +198,7 @@ public class HUD : MonoBehaviour
         StoneButton.SetActive(false);
         DigButton.SetActive(false);
         WaterButton.SetActive(false);
+        Heart.SetActive(false);
         StartButton.gameObject.SetActive(false);
         ProgressBar.gameObject.SetActive(false);
         DisableButtons();
