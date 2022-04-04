@@ -22,6 +22,7 @@ public class HUD : MonoBehaviour
     private float timeLeft = 0;
 
     private bool startedGame = false;
+    private bool canBePaused = true;
 
     public static bool GameIsPaused = false;
 
@@ -162,16 +163,30 @@ public class HUD : MonoBehaviour
     private void Win()
     {
         startedGame = false;
+        canBePaused = false;
         Time.timeScale = 0f;
         WinFields.SetActive(true);
+        WoodButton.SetActive(false);
+        StoneButton.SetActive(false);
+        DigButton.SetActive(false);
+        WaterButton.SetActive(false);
+        StartButton.gameObject.SetActive(false);
+        ProgressBar.gameObject.SetActive(false);
         DisableButtons();
     }
 
     private void Loose()
     {
         startedGame = false;
+        canBePaused = false;
         GameOverFields.SetActive(true);
         Time.timeScale = 0f;
+        WoodButton.SetActive(false);
+        StoneButton.SetActive(false);
+        DigButton.SetActive(false);
+        WaterButton.SetActive(false);
+        StartButton.gameObject.SetActive(false);
+        ProgressBar.gameObject.SetActive(false);
         DisableButtons();
     }
 
@@ -184,8 +199,17 @@ public class HUD : MonoBehaviour
 
     public void Pause()
     {
-        PauseMenu.SetActive(true);
-        Time.timeScale = 0f;
-        GameIsPaused = true;
+        if(canBePaused)
+        {
+            PauseMenu.SetActive(true);
+            Time.timeScale = 0f;
+            GameIsPaused = true;
+        }
+    }
+
+    public void Retry()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -20,4 +20,4 @@ MonoBehaviour:
   maxStone: 5
   maxWater: 300
   maxDig: 15
-  levelTime: 30
+  levelTime: 5
