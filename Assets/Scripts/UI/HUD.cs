@@ -13,6 +13,8 @@ public class HUD : MonoBehaviour
     [SerializeField] GameObject GameOverFields;
     [SerializeField] GameObject PauseMenu;
     [SerializeField] Slider ProgressBar;
+    [SerializeField] private bool showEscapeTutorial = false;
+    [SerializeField] private GameObject tooltipObjectEscape;
 
     [SerializeField] StartLevelButton StartButton;
 
@@ -31,6 +33,10 @@ public class HUD : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(showEscapeTutorial)
+        {
+            tooltipObjectEscape.SetActive(true);
+        }
         levelOptions = GameObject.FindGameObjectWithTag("LevelOptions").GetComponent<LevelOptionsHandler>();
 
         StartButton.start.AddListener(StartGame);

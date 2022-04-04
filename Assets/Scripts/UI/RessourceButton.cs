@@ -12,6 +12,7 @@ public enum RessourceType
 public class RessourceButton : MonoBehaviour
 {
     [Header("Informations")]
+    [SerializeField] private bool showTutorial;
     [SerializeField] public RessourceType Type;
     [SerializeField] private TextMeshProUGUI Title;
     [SerializeField] private TextMeshProUGUI Compteur;
@@ -22,6 +23,8 @@ public class RessourceButton : MonoBehaviour
     [SerializeField] private Image ToggleBg;
     [SerializeField] private Button thisButton;
     private PlayerController Player;
+
+    [SerializeField] private GameObject tooltipObject;
 
     [Header("Sprites")]
     [SerializeField] private Sprite WoodSprite;
@@ -48,6 +51,10 @@ public class RessourceButton : MonoBehaviour
 
     void Start()
     {
+        if(showTutorial)
+        {
+            tooltipObject.SetActive(true);
+        }
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         wateringCanOffset = new Vector2(0, wateringCanCursor.height);
         switch (Type)
