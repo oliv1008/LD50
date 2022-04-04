@@ -75,6 +75,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7094033497534221470, guid: 21cd08b1bc1d0624dad367854f48f5a8, type: 3}
+      propertyPath: m_Radius
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094033497534221470, guid: 21cd08b1bc1d0624dad367854f48f5a8, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7660003201529737149, guid: 21cd08b1bc1d0624dad367854f48f5a8, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -85,6 +93,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7660003201529737149, guid: 21cd08b1bc1d0624dad367854f48f5a8, type: 3}
+    - {fileID: 3666524389449038675, guid: 21cd08b1bc1d0624dad367854f48f5a8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 21cd08b1bc1d0624dad367854f48f5a8, type: 3}
 --- !u!1 &5765314008324647478 stripped
 GameObject:

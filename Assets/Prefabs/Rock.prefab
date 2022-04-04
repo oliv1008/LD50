@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5081570965115889110}
   - component: {fileID: 5081570965115889111}
   - component: {fileID: -8656965760892205735}
-  - component: {fileID: 7660003201529737149}
+  - component: {fileID: 3666524389449038675}
   - component: {fileID: 7094033497534221470}
   - component: {fileID: 9211777748012228645}
   m_Layer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 381219a4eb6de8f4199f9c6ba2f963be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 523e2520704908644a7fa9ae33605010, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -182,8 +182,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!58 &7660003201529737149
-CircleCollider2D:
+--- !u!60 &3666524389449038675
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -196,8 +196,25 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.16
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.003350576, y: 0.13930242}
+      - {x: -0.15482558, y: 0.13723265}
+      - {x: -0.1548256, y: -0.040651627}
+      - {x: -0.08869676, y: -0.10170949}
+      - {x: 0.0016635731, y: -0.124488264}
+      - {x: 0.11756994, y: -0.08733599}
+      - {x: 0.15586056, y: -0.05215014}
+      - {x: 0.15586053, y: 0.14033735}
 --- !u!58 &7094033497534221470
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -213,7 +230,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.16
+  m_Radius: 0.13
 --- !u!50 &9211777748012228645
 Rigidbody2D:
   serializedVersion: 4

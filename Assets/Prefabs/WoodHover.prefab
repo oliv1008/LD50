@@ -79,6 +79,18 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7460920797436627158, guid: 5d8e57bfce947d846849158028b7931b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460920797436627158, guid: 5d8e57bfce947d846849158028b7931b, type: 3}
+      propertyPath: m_Size.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7460920797436627158, guid: 5d8e57bfce947d846849158028b7931b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7562160052361547664, guid: 5d8e57bfce947d846849158028b7931b, type: 3}
       propertyPath: m_Enabled
       value: 0
