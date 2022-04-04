@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db897e4c2731e54f878794749a0f8b6, type: 3}
+  m_Name: level_taupedelave
+  m_EditorClassIdentifier: 
+  isUsingWood: 0
+  isUsingStone: 0
+  isUsingWater: 0
+  isUsingDig: 1
+  maxWood: 0
+  maxStone: 0
+  maxWater: 0
+  maxDig: 100
+  levelTime: 30
