@@ -35,27 +35,27 @@ public class OptionsController : MonoBehaviour
         if(isVolumeOn == true)
         {
             VolumeButton.image.sprite = Volume;
-            music.value = -40;
-            sfx.value = -40;
+            music.value = 0.5f;
+            sfx.value = 0.5f;
         }
         else
         {
             VolumeButton.image.sprite = noVolume;
-            music.value = -80;
-            sfx.value = -80;
+            music.value = 0.00001f;
+            sfx.value = 0.00001f;
         }
     }
 
     public void SetVolumeMusic(float volume)
     {
-        MusicMixer.SetFloat("MusicVolume", volume);
+        MusicMixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20f);
         globalController.musicVolume = volume;
         CheckVolumeValue();
     }
 
     public void SetVolumeSFX(float volume)
     {
-        SFXMixer.SetFloat("SFXVolume", volume);
+        SFXMixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20f);
         globalController.sfxVolume = volume;
         CheckVolumeValue();
     }
@@ -67,7 +67,10 @@ public class OptionsController : MonoBehaviour
         SFXMixer.GetFloat(("SFXVolume"), out sfxVol);
         MusicMixer.GetFloat(("MusicVolume"), out musicVol);
 
-        if (musicVol == -80 && sfxVol == -80)
+        float musicDb = Mathf.Pow(10.0f, musicVol / 20.0f);
+        float sfxDb = Mathf.Pow(10.0f, sfxVol / 20.0f);
+
+        if (musicDb == 0.00001f && sfxDb == 0.00001f)
         {
             isVolumeOn = false;
             VolumeButton.image.sprite = noVolume;

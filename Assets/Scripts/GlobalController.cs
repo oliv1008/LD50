@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GlobalController : MonoBehaviour
 {
-    public float musicVolume = 0;
-    public float sfxVolume = 0;
+    public float musicVolume = 1f;
+    public float sfxVolume = 1f;
 
     void Start()
     {

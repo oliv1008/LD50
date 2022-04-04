@@ -563,8 +563,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b032c6d3ac18e409c36e4d60f30133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicVolume: 0
-  sfxVolume: 0
+  musicVolume: 0.5
+  sfxVolume: 0.5
 --- !u!4 &78291064
 Transform:
   m_ObjectHideFlags: 0
@@ -1488,7 +1488,7 @@ PrefabInstance:
     - target: {fileID: 883331585402127784, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 82535d5853f1d234d8bd794c39260151, type: 3}
+      objectReference: {fileID: 21300000, guid: 8b578b8de6ece48428c39f1893139799, type: 3}
     - target: {fileID: 2831933579132741163, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1508,6 +1508,22 @@ PrefabInstance:
     - target: {fileID: 2831933579370490653, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831933579793115700, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -71.50003
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831933579793115700, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -8.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831933579793115700, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831933579793115700, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2831933579904068263, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
       propertyPath: m_IsActive
@@ -1577,6 +1593,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2831933580354720581, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2831933580560746482, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
       propertyPath: m_Type
       value: 0
@@ -1584,7 +1604,19 @@ PrefabInstance:
     - target: {fileID: 2831933580560746482, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 82535d5853f1d234d8bd794c39260151, type: 3}
+      objectReference: {fileID: 7482667652216324306, guid: 9f33710aa4773d24fa040a2e3e54ee16, type: 3}
+    - target: {fileID: 2831933580560746482, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.19607845
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831933580560746482, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.14509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831933580560746482, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.63529414
+      objectReference: {fileID: 0}
     - target: {fileID: 2831933580560746485, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.66666675
@@ -1592,6 +1624,22 @@ PrefabInstance:
     - target: {fileID: 2831933580560746485, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831933580560746485, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831933580560746485, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831933580560746485, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831933580560746485, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2831933580668408309, guid: 99051c80c5be3c04ab0bd844f844801c, type: 3}
       propertyPath: m_Type
@@ -4848,7 +4896,6 @@ MonoBehaviour:
   OptionsMenu: {fileID: 2145134235}
   ExitButton: {fileID: 1234352300}
   LevelSelectMenu: {fileID: 133085840}
-  firstCanvasMainMenu: {fileID: 1510085949}
   musicAnim: {fileID: 9146752577884809012}
   canvasAnim: {fileID: 1510085955}
   WaitTime: 2
@@ -5391,10 +5438,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 619391827}
   m_HandleRect: {fileID: 1049052859}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_MinValue: 0.00001
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -40548,10 +40595,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 702177600}
   m_HandleRect: {fileID: 1492261552}
   m_Direction: 0
-  m_MinValue: -80
-  m_MaxValue: 0
+  m_MinValue: 0.00001
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

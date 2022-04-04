@@ -16134,6 +16134,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2335709712537345888, guid: 7089aed7e3d30c14b869cc98ecd576d5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 3313287243517672020, guid: 7089aed7e3d30c14b869cc98ecd576d5, type: 3}
       propertyPath: m_Name
       value: LevelComponent
