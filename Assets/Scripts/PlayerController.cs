@@ -131,7 +131,7 @@ public class PlayerController : MonoBehaviour
         {
             if (createRockPossible)
             {
-                Instantiate(rockPrefab, mousePos, Quaternion.identity);
+                Instantiate(rockPrefab, mousePos, rockObject.transform.rotation);
                 hudScript.GetStoneRessourceButton().SetCompteurValue(hudScript.GetStoneRessourceButton().GetCurrentCompteur() - 1);
             }
             else if (createWoodPossible)
@@ -145,6 +145,13 @@ public class PlayerController : MonoBehaviour
             if(canCreateWood)
             {
                 woodObject.transform.Rotate(0f, 0f, 30f);
+            }
+        }
+        if (Input.GetMouseButtonDown(1) && !EventSystem.current.IsPointerOverGameObject())
+        {
+            if (canCreateRock)
+            {
+                rockObject.transform.Rotate(0f, 0f, 30f);
             }
         }
     }
