@@ -19,6 +19,20 @@ MonoBehaviour:
   - m_Id: 42
     m_Sprites:
     - {fileID: 6734180733638348427, guid: 9c633555f8bfd0943846a2d880392b2c, type: 3}
+    - {fileID: 21300000, guid: 413d0cc3ea6a0dd429a76fad1e1fdf87, type: 3}
+    - {fileID: 21300000, guid: b6c91030c2b15f64488331f6adec2c5f, type: 3}
+    - {fileID: 21300000, guid: 5206b1e91acd1774d99f438d97c0802b, type: 3}
+    - {fileID: 21300000, guid: 46d4261cb66bf2744bdde2b726d2b1e9, type: 3}
+    - {fileID: 21300000, guid: 0f8a74da8e75a3247a349a53eb9014ad, type: 3}
+    - {fileID: 21300000, guid: 126c6fd4b84d65547822b463238a8bf9, type: 3}
+    - {fileID: 6734180733638348427, guid: 9c633555f8bfd0943846a2d880392b2c, type: 3}
+    - {fileID: 6734180733638348427, guid: 9c633555f8bfd0943846a2d880392b2c, type: 3}
+    - {fileID: 6734180733638348427, guid: 9c633555f8bfd0943846a2d880392b2c, type: 3}
+    - {fileID: 6734180733638348427, guid: 9c633555f8bfd0943846a2d880392b2c, type: 3}
+    - {fileID: 6734180733638348427, guid: 9c633555f8bfd0943846a2d880392b2c, type: 3}
+    - {fileID: 6734180733638348427, guid: 9c633555f8bfd0943846a2d880392b2c, type: 3}
+    - {fileID: 6734180733638348427, guid: 9c633555f8bfd0943846a2d880392b2c, type: 3}
+    - {fileID: 6734180733638348427, guid: 9c633555f8bfd0943846a2d880392b2c, type: 3}
     - {fileID: 21300000, guid: 56f213f328cb4f349acc6f1de492f301, type: 3}
     - {fileID: 21300000, guid: 1ca52afd0eb6fde43992ab9e9d9cefa8, type: 3}
     - {fileID: 21300000, guid: d16641fe0bb84bb46bd8224e3dc05cab, type: 3}
@@ -34,6 +48,12 @@ MonoBehaviour:
     - {fileID: 6734180733638348427, guid: 9c633555f8bfd0943846a2d880392b2c, type: 3}
     - {fileID: 6734180733638348427, guid: 9c633555f8bfd0943846a2d880392b2c, type: 3}
     - {fileID: 6734180733638348427, guid: 9c633555f8bfd0943846a2d880392b2c, type: 3}
+    - {fileID: 21300000, guid: 413d0cc3ea6a0dd429a76fad1e1fdf87, type: 3}
+    - {fileID: 21300000, guid: b6c91030c2b15f64488331f6adec2c5f, type: 3}
+    - {fileID: 21300000, guid: 5206b1e91acd1774d99f438d97c0802b, type: 3}
+    - {fileID: 21300000, guid: 46d4261cb66bf2744bdde2b726d2b1e9, type: 3}
+    - {fileID: 21300000, guid: 0f8a74da8e75a3247a349a53eb9014ad, type: 3}
+    - {fileID: 21300000, guid: 126c6fd4b84d65547822b463238a8bf9, type: 3}
     - {fileID: 6734180733638348427, guid: 9c633555f8bfd0943846a2d880392b2c, type: 3}
     - {fileID: 6734180733638348427, guid: 9c633555f8bfd0943846a2d880392b2c, type: 3}
     - {fileID: 6734180733638348427, guid: 9c633555f8bfd0943846a2d880392b2c, type: 3}
@@ -51,7 +71,7 @@ MonoBehaviour:
     m_GameObject: {fileID: 8825213682788527416, guid: 728d7bc6d0a70104b821264012c623b4, type: 3}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
-    m_PerlinScale: 0.8
+    m_PerlinScale: 0.7
     m_Output: 1
     m_ColliderType: 1
     m_RandomTransform: 1
