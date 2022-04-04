@@ -29,7 +29,7 @@ public class MainMenuController : MonoBehaviour
     {
         OptionsMenu.SetActive(true);
 
-        Title.SetActive(false);
+        //Title.SetActive(false);
         ButtonsContainer.SetActive(false);
         ExitButton.SetActive(false);
     }
