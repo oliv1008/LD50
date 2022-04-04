@@ -21,6 +21,8 @@ public class MainMenuController : MonoBehaviour
     {
         OptionsMenu.SetActive(false);
         LevelSelectMenu.SetActive(isComingFromLevel);
+        ButtonsContainer.SetActive(!isComingFromLevel);
+        ExitButton.SetActive(!isComingFromLevel);
         isComingFromLevel = false;
     }
     public void OptionClick()
@@ -45,7 +47,6 @@ public class MainMenuController : MonoBehaviour
     {
         LevelSelectMenu.SetActive(false);
 
-        Title.SetActive(true);
         ButtonsContainer.SetActive(true);
         ExitButton.SetActive(true);
     }
@@ -64,7 +65,7 @@ public class MainMenuController : MonoBehaviour
     {
         LevelSelectMenu.SetActive(true);
 
-        Title.SetActive(false);
+        //Title.SetActive(false);
         ButtonsContainer.SetActive(false);
         ExitButton.SetActive(false);
     }
