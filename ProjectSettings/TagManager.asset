@@ -17,6 +17,7 @@ TagManager:
   - HUD
   - Obstacle
   - DestroyedWoodSound
+  - Singleton
   layers:
   - Default
   - TransparentFX

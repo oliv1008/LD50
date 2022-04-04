@@ -15,6 +15,17 @@ public class OptionsController : MonoBehaviour
     public AudioMixer MusicMixer;
     public AudioMixer SFXMixer;
 
+    private GlobalController globalController;
+
+    private void Start()
+    {
+        globalController = GameObject.FindGameObjectWithTag("Singleton").GetComponent<GlobalController>();
+        SetVolumeMusic(globalController.musicVolume);
+        SetVolumeSFX(globalController.sfxVolume);
+        music.value = globalController.musicVolume;
+        sfx.value = globalController.sfxVolume;
+    }
+
     private bool isVolumeOn = true;
 
     public void ClickVolume()
@@ -38,14 +49,14 @@ public class OptionsController : MonoBehaviour
     public void SetVolumeMusic(float volume)
     {
         MusicMixer.SetFloat("MusicVolume", volume);
-
+        globalController.musicVolume = volume;
         CheckVolumeValue();
     }
 
     public void SetVolumeSFX(float volume)
     {
         SFXMixer.SetFloat("SFXVolume", volume);
-
+        globalController.sfxVolume = volume;
         CheckVolumeValue();
     }
 
