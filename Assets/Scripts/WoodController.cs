@@ -26,6 +26,10 @@ public class WoodController : MonoBehaviour
     private Collider2D woodCollider;
     private SpriteRenderer spriteComponent;
 
+    [SerializeField] private GameObject woodParticleEffect;
+    [SerializeField] private Transform rightPosition;
+    [SerializeField] private Transform leftPosition;
+
 
     void Start()
     {
@@ -48,6 +52,9 @@ public class WoodController : MonoBehaviour
                 if (currentHp <= 0)
                 {
                     destroyedSound.Play();
+                    Instantiate(woodParticleEffect, transform.position, Quaternion.identity);
+                    Instantiate(woodParticleEffect, rightPosition.position, Quaternion.identity);
+                    Instantiate(woodParticleEffect, leftPosition.position, Quaternion.identity);
                     Destroy(gameObject);
                 }
                 percentHp = currentHp / hp;
