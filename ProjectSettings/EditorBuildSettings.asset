@@ -36,9 +36,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Niveaux/niveau_aqueduc.unity
     guid: 19f44da015f7a4e4d921316c40f1a018
   - enabled: 1
-    path: Assets/Scenes/Niveaux/niveau_gros1.unity
-    guid: 9900e79e11540e447a355f0c30b755c0
-  - enabled: 1
     path: Assets/Scenes/Niveaux/niveau_labyrinthe.unity
     guid: 615bc26e35219b847a9a22b3f5c6755c
   - enabled: 1
@@ -47,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Niveaux/niveau_ca_bouchonne.unity
     guid: 3f19263a83715dc41b14a4b0f8b161f1
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/niveau_gros1.unity
+    guid: 9900e79e11540e447a355f0c30b755c0
   m_configObjects: {}
