@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Niveaux/niveau_taupedelave.unity
     guid: bfcfc816ff5207e40b1c2ef893a7f634
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/niveau_ca_bouchonne.unity
+    guid: 3f19263a83715dc41b14a4b0f8b161f1
   m_configObjects: {}
