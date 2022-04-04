@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isUsingWood: 1
   isUsingStone: 0
-  isUsingWater: 1
+  isUsingWater: 0
   isUsingDig: 1
-  maxWood: 3
+  maxWood: 1
   maxStone: 0
-  maxWater: 100
+  maxWater: 0
   maxDig: 5
   levelTime: 30
