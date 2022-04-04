@@ -21,26 +21,26 @@ EditorBuildSettings:
     path: Assets/Scenes/Niveaux/niveau_tuto_4.unity
     guid: 949df0c92c60ff7438fe93bda2487066
   - enabled: 1
-    path: Assets/Scenes/Niveaux/niveau_fusion.unity
-    guid: 87dc7ed81394b764ab86b478c64f45d7
-  - enabled: 1
     path: Assets/Scenes/Niveaux/niveau_intersectionhumide.unity
     guid: 93ace27eeb7c1b6419964ebf58e2ac8b
-  - enabled: 1
-    path: Assets/Scenes/Niveaux/niveau_deborde.unity
-    guid: df3be02d1bdbca548abaca8c36ec2277
   - enabled: 1
     path: Assets/Scenes/Niveaux/niveau_pontbrulant.unity
     guid: 91245ac6ac4e4fd41bd054bcaea2c7be
   - enabled: 1
+    path: Assets/Scenes/Niveaux/niveau_fusion.unity
+    guid: 87dc7ed81394b764ab86b478c64f45d7
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/niveau_deborde.unity
+    guid: df3be02d1bdbca548abaca8c36ec2277
+  - enabled: 1
     path: Assets/Scenes/Niveaux/niveau_aqueduc.unity
     guid: 19f44da015f7a4e4d921316c40f1a018
   - enabled: 1
-    path: Assets/Scenes/Niveaux/niveau_labyrinthe.unity
-    guid: 615bc26e35219b847a9a22b3f5c6755c
-  - enabled: 1
     path: Assets/Scenes/Niveaux/niveau_gros1.unity
     guid: 9900e79e11540e447a355f0c30b755c0
+  - enabled: 1
+    path: Assets/Scenes/Niveaux/niveau_labyrinthe.unity
+    guid: 615bc26e35219b847a9a22b3f5c6755c
   - enabled: 1
     path: Assets/Scenes/Niveaux/niveau_taupedelave.unity
     guid: bfcfc816ff5207e40b1c2ef893a7f634
