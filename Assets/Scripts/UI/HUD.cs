@@ -57,8 +57,6 @@ public class HUD : MonoBehaviour
         ressourceButtons.Add(WaterButton.GetComponent<RessourceButton>());
         ressourceButtons.Add(DigButton.GetComponent<RessourceButton>());
 
-        DisableButtons();
-
         WinFields.SetActive(false);
         GameOverFields.SetActive(false);
         PauseMenu.SetActive(false);
