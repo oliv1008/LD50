@@ -167,7 +167,7 @@ public class HUD : MonoBehaviour
 
     private void StartGame()
     {
-        EnableButtons();
+        //EnableButtons();
         startedGame = true;
     }
 
