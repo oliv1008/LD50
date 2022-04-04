@@ -77063,6 +77063,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5522788154964002024, guid: 7089aed7e3d30c14b869cc98ecd576d5, type: 3}
+      propertyPath: showTutorial
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5739930058007447697, guid: 7089aed7e3d30c14b869cc98ecd576d5, type: 3}
+      propertyPath: showEscapeTutorial
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6132310030010980690, guid: 7089aed7e3d30c14b869cc98ecd576d5, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
