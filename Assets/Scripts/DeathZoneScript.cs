@@ -5,19 +5,16 @@ using UnityEngine.Events;
 
 public class DeathZoneScript : MonoBehaviour
 {
-    public int hpLeft = 10;
+    public int hpMax = 10;
+    private int hpLeft;
     public static UnityEvent dieEvent = new UnityEvent();
 
-    // Start is called before the first frame update
+    private HeartController heartController;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        heartController = GameObject.FindGameObjectWithTag("Heart").GetComponent<HeartController>();
+        hpLeft = hpMax;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,6 +22,7 @@ public class DeathZoneScript : MonoBehaviour
         if (collision.CompareTag("Lava"))
         {
             hpLeft -= 1;
+            heartController.SetRatio(hpLeft/(float)hpMax);
             if (hpLeft == 0)
             {
                 dieEvent.Invoke();

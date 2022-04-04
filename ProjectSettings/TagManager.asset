@@ -18,6 +18,8 @@ TagManager:
   - Obstacle
   - DestroyedWoodSound
   - Singleton
+  - DeathZone
+  - Heart
   layers:
   - Default
   - TransparentFX
