@@ -154,6 +154,13 @@ public class HUD : MonoBehaviour
     public void ContinueButton()
     {
         Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        MainMenuController.isComingFromLevel = true;
+    }
+
+    public void LevelSelectionButton()
+    {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
         MainMenuController.isComingFromLevel = true;
     }
