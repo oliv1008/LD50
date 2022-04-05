@@ -44,10 +44,15 @@ public class PlayerController : MonoBehaviour
     private Color redHalfAlpha = new Color(1f, 0f, 0f, 127f / 255f);
     private Color freedentWhite = new Color(1f, 1f, 1f, 1f);
 
+    private GameObject[] enjolivers;
+    private List<GameObject> enjoliverList;
+
     private void Start()
     {
         destructibleTilemap = GameObject.FindGameObjectWithTag("Destructible").GetComponent<Tilemap>();
         hudScript = GameObject.FindGameObjectWithTag("HUD").GetComponent<HUD>();
+        enjolivers = GameObject.FindGameObjectsWithTag("Enjolivers");
+        enjoliverList = new List<GameObject>(enjolivers);
     }
 
     private void Update()
@@ -117,6 +122,15 @@ public class PlayerController : MonoBehaviour
                     digSound.Play();
                 Instantiate(digParticleEffect, mousePos, Quaternion.identity);
                 destructibleTilemap.SetTile(destructibleTilemap.WorldToCell(mousePos), null);
+                List<GameObject> tmpEnjolivers = new List<GameObject>(enjoliverList);
+                foreach(GameObject enjoliver in tmpEnjolivers)
+                {
+                    if(Mathf.Abs(enjoliver.transform.position.x - mousePos.x) <= destructibleTilemap.cellSize.x*3 && Mathf.Abs(enjoliver.transform.position.y - mousePos.y) <= destructibleTilemap.cellSize.y*3)
+                    {
+                        enjoliverList.Remove(enjoliver);
+                        Destroy(enjoliver);
+                    }
+                }
                 hudScript.GetDigRessourceButton().SetFillingBarValue(hudScript.GetDigRessourceButton().GetCurrentFilligBar() - 1);
             }
             else if(createWaterPossible)
