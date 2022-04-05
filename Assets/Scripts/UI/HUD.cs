@@ -117,6 +117,18 @@ public class HUD : MonoBehaviour
                 Win();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (GameIsPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
     }
 
     private void EnableButtons()
