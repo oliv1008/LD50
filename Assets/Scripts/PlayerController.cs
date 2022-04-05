@@ -136,6 +136,8 @@ public class PlayerController : MonoBehaviour
             }
             else if (createWoodPossible)
             {
+                Debug.Log("mousePos : " + mousePos);
+                Debug.Log("Input.mousePosition" + Input.mousePosition);
                 Instantiate(woodPrefab, mousePos, woodObject.transform.rotation);
                 hudScript.GetWoodRessourceButton().SetCompteurValue(hudScript.GetWoodRessourceButton().GetCurrentCompteur() - 1);
             }
