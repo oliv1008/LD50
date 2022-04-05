@@ -77314,7 +77314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6278108391207551566, guid: 7089aed7e3d30c14b869cc98ecd576d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 49.4
+      value: 61.9
       objectReference: {fileID: 0}
     - target: {fileID: 6278108391517299189, guid: 7089aed7e3d30c14b869cc98ecd576d5, type: 3}
       propertyPath: startTimeBetweenParticle
@@ -77334,7 +77334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6278108391772484439, guid: 7089aed7e3d30c14b869cc98ecd576d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 65.4
+      value: 61.8
       objectReference: {fileID: 0}
     - target: {fileID: 6278108392152266212, guid: 7089aed7e3d30c14b869cc98ecd576d5, type: 3}
       propertyPath: startTimeBetweenParticle
@@ -77566,11 +77566,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8636316174365672415, guid: 7089aed7e3d30c14b869cc98ecd576d5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -57.52
+      value: -62.7
       objectReference: {fileID: 0}
     - target: {fileID: 8636316174365672415, guid: 7089aed7e3d30c14b869cc98ecd576d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 55.86
+      value: 69.32
       objectReference: {fileID: 0}
     - target: {fileID: 8716433000470510635, guid: 7089aed7e3d30c14b869cc98ecd576d5, type: 3}
       propertyPath: m_RootOrder
