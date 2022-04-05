@@ -78928,6 +78928,12 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 165
       objectReference: {fileID: 0}
+    - target: {fileID: 3099306448675508204, guid: 7089aed7e3d30c14b869cc98ecd576d5, type: 3}
+      propertyPath: m_text
+      value: "Wood is a destrucible material. Use it to slow the lava.  Click on
+        the button to go in build mode.\nRight click to rotate 30\xB0.\nLeft click
+        to build it."
+      objectReference: {fileID: 0}
     - target: {fileID: 3119340414464257807, guid: 7089aed7e3d30c14b869cc98ecd576d5, type: 3}
       propertyPath: m_RootOrder
       value: 100

@@ -22,6 +22,7 @@ public class RessourceButton : MonoBehaviour
     [SerializeField] private Toggle ToggleItem;
     [SerializeField] private Image ToggleBg;
     [SerializeField] private Button thisButton;
+    [SerializeField] private TextMeshProUGUI compteurBarText;
     private PlayerController Player;
 
     [SerializeField] private GameObject tooltipObject;
@@ -153,6 +154,7 @@ public class RessourceButton : MonoBehaviour
     {
         RessourceProgressBarColor.fillAmount = (float)value / (float)maxFillingBar;
         currentFillingBar = value;
+        compteurBarText.text = value + " / " + maxFillingBar;
 
         if (value == 0)
         {
@@ -170,6 +172,7 @@ public class RessourceButton : MonoBehaviour
         Compteur.color = new Color(200f / 255f, 200f / 255f, 200f / 255f, 128f / 255f);
         RessourceProgressBar.GetComponent<Image>().color = new Color(200f / 255f, 200f / 255f, 200f / 255f, 128f / 255f);
         ToggleBg.color = new Color(200f / 255f, 200f / 255f, 200f / 255f, 128f / 255f);
+        compteurBarText.color = new Color(200f / 255f, 200f / 255f, 200f / 255f, 128f / 255f);
     }
 
     public void Enable()
